@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: #27ae60;
+}
+
+.title{
+    text-align: center;
+    padding-bottom: 15px;
+}
+.play{
+    text-align: center;
+}
+
+.button{
+    float: initial;
+    text-decoration: none;
+    font-size: 50px;
+    
+    color: aliceblue;
+}
+
+.play :hover{
+    color: #2c3e50;
+}
