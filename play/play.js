@@ -1,4 +1,4 @@
-var bty = document.getElementById("yes").innerHTML
+var bty = document.getElementById("yes")
 
 
 function getRandomInt(max) {
@@ -7,11 +7,14 @@ function getRandomInt(max) {
 
 function btyes(new_number){
     var new_number = getRandomInt(13)
-    alert("your new number is" + new_number)
+    return new_number
+    
 }
 var a = getRandomInt(13)
 var b = getRandomInt(13)
 var final_number = a+b
 
-bty.onclick = btyes;
+
+
+bty.onclick = alert(c)
 
