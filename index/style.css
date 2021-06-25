@@ -9,7 +9,8 @@ body{
 
 .title{
     text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 75px;
+    padding-top: 25px;
 }
 .play{
     text-align: center;
@@ -19,10 +20,29 @@ body{
     float: initial;
     text-decoration: none;
     font-size: 50px;
-    
+    border: 2px solid #ffffff; 
     color: aliceblue;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 50px;
+    background-color: #1ba332;
+    padding-bottom: 100 px;
 }
 
 .play :hover{
     color: #2c3e50;
+}
+
+.links{
+    background-color: #1e272e;
+    color: #d2dae2;
+    
+}
+
+.insta a{
+    display: inline-block;
+    color: white;
+    width: 60px;
+    height: 60px;
 }
