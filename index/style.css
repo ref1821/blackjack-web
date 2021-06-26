@@ -12,8 +12,30 @@ body{
     padding-bottom: 75px;
     padding-top: 25px;
 }
+
+.nav{
+    text-align: right;
+    padding: 10px;
+    background-color: #2f3640;
+}
+
+.nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    
+
+}
+
+.nav a:hover{
+    color: #718093;
+    text-decoration: underline;
+    
+}
+
 .play{
     text-align: center;
+    padding-bottom: 75px;
 }
 
 .button{
@@ -38,11 +60,16 @@ body{
     background-color: #1e272e;
     color: #d2dae2;
     
+    
 }
 
 .insta a{
     display: inline-block;
     color: white;
-    width: 60px;
-    height: 60px;
+    padding: 10px;
+    
+}
+
+.insta a:hover{
+    color: grey;
 }
