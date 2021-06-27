@@ -9,7 +9,7 @@ body{
 
 .title{
     text-align: center;
-    padding-bottom: 75px;
+    padding-bottom: 150px;
     padding-top: 25px;
 }
 
@@ -35,7 +35,7 @@ body{
 
 .play{
     text-align: center;
-    padding-bottom: 75px;
+    padding-bottom: 350px;
 }
 
 .button{
@@ -63,13 +63,25 @@ body{
     
 }
 
+.insta{
+    align-items: center;
+    
+}
+
 .insta a{
     display: inline-block;
     color: white;
     padding: 10px;
+    margin-left: 23%;
+
     
 }
 
 .insta a:hover{
     color: grey;
+}
+.made{
+    text-align: center;
+    padding-bottom: 50px;
+    opacity: 70%;
 }
