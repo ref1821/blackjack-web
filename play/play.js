@@ -1,20 +1,19 @@
-var bty = document.getElementById("yes")
-
-
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
-
-function btyes(new_number){
-    var new_number = getRandomInt(13)
-    return new_number
-    
+function carta(numero){
+  this.numero = numero
+  
 }
-var a = getRandomInt(13)
-var b = getRandomInt(13)
-var final_number = a+b
 
+function randint(min,max){
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random()*(1+max-min)+min);
+}
+var num1 = console.log(randint(1,10));
+var num2 = console.log(randint(1,10));
 
+string(num1)
+string(num2)
 
-bty.onclick = alert(c)
-
+total = "your numbers are: " + num1 + "and"+ num2
+console.log(total)
+document.querySelector('p').textContent= total
