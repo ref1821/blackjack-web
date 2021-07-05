@@ -1,5 +1,5 @@
 function carta(numero){
-  this.numero = numero
+  this.numero = numero;
   
 }
 
@@ -11,27 +11,46 @@ function randint(min,max){
 
 
 
+const as = 1;
+const dos = 2;
+const tres = 3;
+const cuatro = 4;
+const cinco = 5;
+const seis = 6;
+const siete = 7;
+const ocho = 8;
+const nueve = 9;
+const diez = 10;
+const joto = 10;
+const reina = 10;
+const rey = 10;
 
-const as = 1
-const dos = 2
-const tres = 3
-const cuatro = 4
-const cinco = 5
-const seis = 6
-const siete = 7
-const ocho = 8
-const nueve = 9
-const diez = 10
-const joto = 10
-const reina = 10
-const rey = 10
-
-var num = new Array(as, dos, tres, cuatro, cinco, seis, siete, ocho ,nueve, diez, joto, reina, rey)
+var num = new Array(as, dos, tres, cuatro, cinco, seis, siete, ocho ,nueve, diez, joto, reina, rey);
 
 
-var dnum = num[Math.floor(Math.random()*num.length)]
-var dnum2 = num[Math.floor(Math.random()*num.length)]
+var dnum = num[Math.floor(Math.random()*num.length)];
+var dnum2 = num[Math.floor(Math.random()*num.length)];
+var dnum3 = num[Math.floor(Math.random()*num.length)];
 
-console.log(dnum)
-console.log(dnum2)
-document.write("your numbers are  "+ dnum +  "  " +dnum2)
+
+console.log(dnum);
+console.log(dnum2);
+
+function yes(){
+  return;
+}
+
+
+const tex = document.querySelector('#text');
+tex.textContent = "your numbers are  "+ dnum +  " & " +dnum2;
+
+totalUno = dnum + dnum2;
+
+y = document.getElementById("yes").addEventListener("click", () =>{
+  var n3 = document.createElement("p");
+  n3.innerHTML = "new number is = "+ dnum3;
+  document.getElementById("div").appendChild(n3);
+  
+});
+
+console.log(y)
