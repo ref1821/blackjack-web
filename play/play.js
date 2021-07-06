@@ -30,7 +30,7 @@ var num = new Array(as, dos, tres, cuatro, cinco, seis, siete, ocho ,nueve, diez
 
 var dnum = num[Math.floor(Math.random()*num.length)];
 var dnum2 = num[Math.floor(Math.random()*num.length)];
-var dnum3 = num[Math.floor(Math.random()*num.length)];
+
 
 
 console.log(dnum);
@@ -47,10 +47,17 @@ tex.textContent = "your numbers are  "+ dnum +  " & " +dnum2;
 totalUno = dnum + dnum2;
 
 y = document.getElementById("yes").addEventListener("click", () =>{
+  var dnum3 = num[Math.floor(Math.random()*num.length)];
   var n3 = document.createElement("p");
   n3.innerHTML = "new number is = "+ dnum3;
   document.getElementById("div").appendChild(n3);
-  
+  console.log(dnum3)
+  totalUno += dnum3
+  console.log(totalUno)
 });
 
-console.log(y)
+
+n = document.getElementById("no").addEventListener("click", () =>{
+  var nf = document.createElement("p");
+  nf.innerHTML = "your final number is =" + dnum3
+})
