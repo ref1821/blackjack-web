@@ -1,13 +1,4 @@
-function carta(numero){
-  this.numero = numero;
-  
-}
-
-function randint(min,max){
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random()*(1+max-min)+min);
-}
+//variables
 
 const as = 1;
 const dos = 2;
@@ -30,10 +21,21 @@ var dnum2 = num[Math.floor(Math.random()*num.length)];
 
 var totalUno = dnum + dnum2;
 
+//DOMs sueltos
+
 var tot = document.getElementById("tot");
 tot.innerHTML = "Total Number: " + totalUno
 console.log(dnum);
 console.log(dnum2);
+
+const tex = document.querySelector('#text');
+tex.textContent = "your numbers are  "+ dnum +  " & " +dnum2;
+
+//funciones
+function print(palabra) {
+  var p = console.log(palabra);
+  return p;
+}
 
 function nothing(){
   return;
@@ -66,10 +68,7 @@ function yes(){
 
 }
 
-const tex = document.querySelector('#text');
-tex.textContent = "your numbers are  "+ dnum +  " & " +dnum2;
-
-
+//botones para el usuario
 
 document.getElementById("yes").addEventListener("click", () => {
   yes()
@@ -86,3 +85,39 @@ document.getElementById("fg").addEventListener('click', () => {
   nf.innerHTML = "your final number is =" + totalUno
   document.getElementById("div").appendChild(nf);
 })
+
+//computadora
+
+var cnum = num[Math.floor(Math.random()*num.length)];
+var cnum2 = num[Math.floor(Math.random()*num.length)];
+var sumc = cnum + cnum2;
+
+console.log("numeros compu " + cnum + " " + cnum2);
+
+while(sumc<21){
+  if (sumc >= 19){
+    break;
+  }
+  else if(sumc>15){
+    var a = new Array("yes", "yes", "yes", "no", "no")
+    var aD = a[Math.floor(Math.random()*num.length)];
+    
+    if (aD == "yes" ){
+      var cnum3 = num[Math.floor(Math.random()*num.length)];
+    sumc += cnum3;
+    }
+    else{
+      break
+    }
+  }
+  else{
+    var cnum3 = num[Math.floor(Math.random()*num.length)];
+    sumc += cnum3;
+  }
+}
+
+console.log(sumc)
+
+var com1 = document.getElementById("com1");
+com1.innerHTML = "Computer's numbers are: # and "+ cnum
+var com2 = document.getElementById("com2");
