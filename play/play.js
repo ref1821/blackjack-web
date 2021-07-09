@@ -28,8 +28,10 @@ var num = new Array(as, dos, tres, cuatro, cinco, seis, siete, ocho ,nueve, diez
 var dnum = num[Math.floor(Math.random()*num.length)];
 var dnum2 = num[Math.floor(Math.random()*num.length)];
 
- var totalUno = dnum + dnum2;
+var totalUno = dnum + dnum2;
 
+var tot = document.getElementById("tot");
+tot.innerHTML = "Total Number: " + totalUno
 console.log(dnum);
 console.log(dnum2);
 
@@ -38,13 +40,6 @@ function nothing(){
 }
 
 function yes(){
-  let dnum3 = num[Math.floor(Math.random()*num.length)];
-  var n3 = document.createElement("p");
-  n3.innerHTML = "new number is = "+ dnum3;
-  document.getElementById("div").appendChild(n3);
-  console.log(dnum3)
-  totalUno += dnum3
-  console.log(totalUno)
   if(totalUno>21){
     var lose = document.createElement("p");
     lose.innerHTML = "you lost"
@@ -53,6 +48,21 @@ function yes(){
       nothing();
     });
   }
+  else{let dnum3 = num[Math.floor(Math.random()*num.length)];
+    var n3 = document.createElement("p");
+    n3.innerHTML = "new number is = "+ dnum3;
+    document.getElementById("div").appendChild(n3);
+    console.log(dnum3)
+    totalUno += dnum3
+    console.log(totalUno)
+    var tot = document.getElementById("tot");
+    tot.innerHTML = "Total Number: " + totalUno
+    if (totalUno>21){
+      var lose = document.createElement("p");
+      lose.innerHTML = "you lost"
+      document.getElementById("div").appendChild(lose);
+    }}
+  
 
 }
 
