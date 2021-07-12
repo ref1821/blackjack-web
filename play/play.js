@@ -25,8 +25,8 @@ var totalUno = dnum + dnum2;
 
 var tot = document.getElementById("tot");
 tot.innerHTML = "Total Number: " + totalUno
-console.log(dnum);
-console.log(dnum2);
+console.log(dnum + " & " + dnum2);
+
 
 const tex = document.querySelector('#text');
 tex.textContent = "your numbers are  "+ dnum +  " & " +dnum2;
@@ -54,9 +54,9 @@ function yes(){
     var n3 = document.createElement("p");
     n3.innerHTML = "new number is = "+ dnum3;
     document.getElementById("div").appendChild(n3);
-    console.log(dnum3)
+    console.log("numero 3: "+dnum3)
     totalUno += dnum3
-    console.log(totalUno)
+    console.log("nuevo total: " + totalUno)
     var tot = document.getElementById("tot");
     tot.innerHTML = "Total Number: " + totalUno
     if (totalUno>21){
@@ -80,11 +80,7 @@ document.getElementById("no").addEventListener("click", () => {
   document.getElementById("div").appendChild(no);
 })
 
-document.getElementById("fg").addEventListener('click', () => {
-  var nf = document.createElement("p");
-  nf.innerHTML = "your final number is =" + totalUno
-  document.getElementById("div").appendChild(nf);
-})
+
 
 //computadora
 
@@ -116,8 +112,46 @@ while(sumc<21){
   }
 }
 
-console.log(sumc)
+console.log("suma compu: " + sumc)
 
 var com1 = document.getElementById("com1");
 com1.innerHTML = "Computer's numbers are: # and "+ cnum
 var com2 = document.getElementById("com2");
+
+//finish games
+document.getElementById("fg").addEventListener('click', () => {
+  if (totalUno == 21 && sumc == 21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "There's a tie"
+  }
+  else if(totalUno == 21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "You win"
+  }
+  else if(sumc == 21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "Computer wins"
+  }
+  else if(totalUno>21 && sumc>21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "Both lose"
+  }
+  else if (totalUno>21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "You lose"
+  }
+  else if (sumc>21){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "You win"
+  }
+  else if(totalUno>sumc){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "You win"
+  }
+  else if(sumc>totalUno){
+    var bw = document.getElementById("div3");
+    bw.innerHTML = "You lose"
+  }
+  var ct = document.getElementById("com2");
+  ct.innerHTML= "Total Number: "+sumc
+})
